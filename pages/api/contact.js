@@ -29,7 +29,7 @@ async function handler(req, res) {
         'mongodb+srv://exorra:rN53bOasKMgMb6QI@cluster0.tq1fkxh.mongodb.net/?retryWrites=true&w=majority'
       );
     } catch (error) {
-      res.status(500).json({ message: res.body });
+      res.status(500).json({ message: res });
       return;
     }
 
