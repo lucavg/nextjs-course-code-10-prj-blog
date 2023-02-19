@@ -26,7 +26,7 @@ async function handler(req, res) {
 
     try {
       client = await MongoClient.connect(
-        'mongodb+srv://exorra:rN53bOasKMgMb6QI@cluster0.tq1fkxh.mongodb.net/?retryWrites=true&w=majority'
+        `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.tq1fkxh.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
       );
     } catch (error) {
       res.status(500).json({ message: res });
